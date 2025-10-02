@@ -1,4 +1,4 @@
-# `born2beroot`
+# `Born2beRoot`
 
 ![42 School](https://img.shields.io/badge/42-Madrid-000000?style=flat&logo=42&logoColor=white)
 ![Score](https://img.shields.io/badge/Score-110%2F100-success)
