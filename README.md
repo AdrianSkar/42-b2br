@@ -84,10 +84,10 @@ sda                       8:0    0 30.8G  0 disk
 
 | Component | Configuration | Purpose |
 |-----------|--------------|---------|
-| **SSH** | Custom port, Root login disabled | Secure remote access |
-| **UFW/Firewalld** | Default deny policy, Minimal open ports | Network protection |
-| **Sudo** | Limited attempts, TTY mode required, Full command logging, Restricted paths | Privilege escalation control |
-| **Passwords** | Expiration policies, Minimum age, Advance warning, Length and complexity requirements | Account security |
+| **SSH** | Custom port, root login disabled | Secure remote access |
+| **UFW/Firewalld** | Default deny policy, minimal open ports | Network protection |
+| **Sudo** | Limited attempts, TTY mode required, full command logging, restricted paths | Privilege escalation control |
+| **Passwords** | Expiration policies, minimum age, advance warning, length and complexity requirements | Account security |
 | **AppArmor/SELinux** | Enabled on boot with enforcing mode | Mandatory Access Control |
 
 ### Monitoring script
@@ -104,8 +104,8 @@ The monitoring script (`monitoring.sh`) collects and broadcasts system informati
 | Metric | Command/Method | Description |
 |--------|---------------|-------------|
 | Architecture | `uname -a` | OS architecture and kernel version |
-| Physical CPUs | `lscpu` → Socket count | Number of physical processor cores |
-| Virtual CPUs | `lscpu` → CPU count | Number of virtual processor cores |
+| Physical CPUs | `lscpu` → Socket count | Number of physical CPU sockets |
+| Virtual CPUs | `lscpu` → CPU count | Number of logical processors (cores/threads) |
 | Memory usage | `free -m` | Currently available RAM and usage percentage |
 | Disk usage | `df -h --total` | Currently available disk space and usage percentage |
 | CPU load | `vmstat 1 2` | Current processor usage as percentage |
@@ -118,7 +118,7 @@ The monitoring script (`monitoring.sh`) collects and broadcasts system informati
 
 #### Script output example
 ```plaintext
-Broadcast message from root@debian (tty1) (Thu Oct 02 15:45:00 2025):
+Broadcast message from root@debian (tty1) (Thu Oct 02 15:45:00 2024):
 
 #Architecture: Linux debian 6.1.0-25-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.106-3 x86_64 GNU/Linux
 #CPU physical: 1
